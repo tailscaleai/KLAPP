@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+      - FFMPEG_PATH=/usr/bin/ffmpeg
+    volumes:
+      - ./public/uploads:/app/public/uploads
+      - ./public/exports:/app/public/exports

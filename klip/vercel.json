@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "app/api/**": {
+      "maxDuration": 300,
+      "memory": 3008
+    }
+  },
+  "env": [
+    "NEXT_PUBLIC_API_URL",
+    "DATABASE_URL",
+    "HUGGINGFACE_API_KEY",
+    "FFMPEG_PATH"
+  ],
+  "redirects": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
